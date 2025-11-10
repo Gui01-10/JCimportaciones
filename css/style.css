@@ -1,0 +1,558 @@
+:root {
+  --roxo: #6C2BD9;
+  --roxo-escuro: #4A0E9E;
+  --azul: #002B5B;
+  --amarelo: #F7B500;
+  --fundo: #FAFAFA;
+  --texto: #1E1E1E;
+}
+
+/* ------------------- GERAL ------------------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--fundo);
+  color: var(--texto);
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ------------------- NAVBAR ------------------- */
+.navbar {
+  background-color: var(--azul);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand strong {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+/* COR AO PASSAR O MOUSE */
+.navbar-brand:hover strong {
+  color: var(--roxo);
+}
+
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--roxo) !important;
+}
+.navbar-brand img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 45px;
+  height: 45px;
+  border: 2px solid var(--amarelo); /* borda dourada pra destacar */
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* ------------------- HERO ------------------- */
+.hero {
+  background: 
+    linear-gradient(rgba(0, 43, 91, 0.5), rgba(108, 43, 217, 0.5)),
+    url("../img/JC importaciones.jpeg") center center/cover no-repeat;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  color: var(--roxo);
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+  color: #f3f3f3;
+  max-width: 700px;
+  margin: 15px auto 0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.btn-amarelo {
+  background-color: var(--roxo);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-amarelo:hover {
+  background-color: var(--roxo-escuro);
+  transform: scale(1.05);
+}
+
+/* SEÇÃO SERVIÇOS */
+.bg-fundo {
+  background-color: var(--fundo);
+}
+
+.card-servico {
+  background-color: #ffffff;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.card-servico:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card-servico .card-title {
+  color: var(--roxo);
+  font-weight: 600;
+}
+
+.card-servico .card-text {
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+/* LOGO REDONDO */
+.logo-redondo {
+  border-radius: 50%;
+}
+
+/* COR PERSONALIZADA */
+.text-roxo {
+  color: var(--roxo);
+}
+
+/* CATÁLOGO */
+.catalogo-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.catalogo-card img {
+  height: 240px;
+  object-fit: cover;
+}
+
+.catalogo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.bg-fundo {
+  background-color: var(--fundo);
+}
+
+/* ------------------- CONTATO ------------------- */
+.btn-contato {
+  width: 220px;
+  height: 60px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-wpp {
+  background-color: #25D366;
+}
+
+.btn-wpp svg path {
+  fill: #fff;
+}
+
+.btn-wpp:hover {
+  background-color: #1eb653;
+  transform: translateY(-3px);
+}
+
+.btn-insta {
+  background: linear-gradient(45deg, #6C2BD9, #dd2a7b, #8134af, #515bd4);
+}
+
+.btn-insta svg path {
+  fill: #fff;
+}
+
+.btn-insta:hover {
+  opacity: 0.9;
+  transform: translateY(-3px);
+}
+
+/* ------------------- FOOTER ------------------- */
+footer {
+  background-color: var(--azul);
+  color: white;
+  border-top: 3px solid var(--roxo);
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+footer img {
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+}
+
+footer img:hover {
+  transform: scale(1.15);
+}
+
+footer a svg {
+  transition: transform 0.2s ease-in-out;
+}
+
+footer a svg:hover {
+  transform: scale(1.15);
+}
+
+/* ------------------- RESPONSIVO ------------------- */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+    background-attachment: scroll;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn-contato {
+    width: 90%;
+  }
+
+/* ------------------- CATÁLOGO RESPONSIVO OTIMIZADO ------------------- */
+
+/* Imagens do catálogo — responsivas e uniformes */
+.produto-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Efeito de destaque nos cards */
+.catalogo-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.catalogo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(108, 43, 217, 0.25);
+}
+
+/* Títulos e textos dentro do catálogo */
+.catalogo-card .card-title {
+  color: var(--roxo);
+  font-weight: 600;
+}
+
+.catalogo-card .card-text {
+  color: var(--texto);
+  font-size: 0.95rem;
+}
+
+/* Botão "Ver mais" */
+.btn-amarelo {
+  background-color: var(--roxo);
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px 28px;
+  transition: all 0.3s ease;
+}
+
+.btn-amarelo:hover {
+  background-color: var(--roxo-escuro);
+  transform: scale(1.05);
+}
+/* GRID PERSONALIZADO PARA 5 ITENS NO DESKTOP */
+@media (min-width: 1200px) {
+  .col-xl-custom {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+/* Ajuste visual extra para não colar nas laterais */
+.catalogo-grid {
+  justify-content: center;
+}
+/* ====== CARRINHO FLOUTANTE E MODAL (adicionar no style.css) ====== */
+.cart-float{
+  position: fixed;
+  right: 20px;
+  bottom: 22px;
+  background: var(--roxo);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  z-index: 1200;
+  cursor: pointer;
+}
+
+.cart-icon{ font-size: 22px; line-height:1; }
+.cart-count{
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: #fff;
+  color: var(--roxo);
+  font-weight:700;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  font-size:12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* Modal */
+.cart-modal{ display:none; position:fixed; inset:0; z-index:1300; }
+.cart-modal[aria-hidden="false"]{ display:block; }
+
+.cart-modal-backdrop{
+  position:absolute; inset:0; background:rgba(0,0,0,0.5);
+  backdrop-filter: blur(2px);
+}
+
+.cart-modal-content{
+  position:relative;
+  width: min(720px, 96%);
+  max-height: 85vh;
+  margin: 6vh auto;
+  background: #fff;
+  border-radius: 12px;
+  overflow:auto;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+  padding: 18px;
+}
+
+.cart-modal-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid rgba(0,0,0,0.06);
+  padding-bottom: 12px;
+}
+
+.cart-modal-header h5{ margin:0; color:var(--roxo); font-weight:700; }
+.cart-items{ padding: 12px 0; }
+
+/* item */
+.cart-item{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  padding:10px 0;
+  border-bottom:1px solid rgba(0,0,0,0.05);
+}
+
+.cart-item img{
+  width:64px;
+  height:64px;
+  object-fit:cover;
+  border-radius:8px;
+  border:1px solid rgba(0,0,0,0.06);
+}
+
+.cart-item .meta{ flex:1; text-align:left; }
+.cart-item .meta h6{ margin:0 0 6px 0; font-size:1rem; color:var(--texto); }
+.cart-item .meta .qtd{ font-size:0.95rem; color:#666; }
+
+.cart-item .controls{
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+
+.cart-item .controls button{
+  min-width:36px;
+  height:36px;
+  border-radius:8px;
+  border: none;
+  background: var(--roxo);
+  color: #fff;
+  cursor:pointer;
+}
+
+.cart-item .controls .remove{
+  background: transparent;
+  color: #c33;
+  border:1px solid rgba(0,0,0,0.06);
+  padding:6px 8px;
+}
+
+.cart-footer{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px solid rgba(0,0,0,0.06);
+}
+
+.cart-actions button{ min-width:140px; }
+
+@media (max-width:600px){
+  .cart-modal-content{ margin: 4vh 10px; padding:12px; }
+  .cart-item img{ width:56px; height:56px; }
+  .cart-float{ width:56px; height:56px; }
+}
+
+/* === Estilos Roxos Modernos para Botões e Texto === */
+.btn-roxo {
+  background-color: #6f42c1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-roxo:hover {
+  background-color: #5b32a1;
+  transform: translateY(-2px);
+}
+
+.btn-outline-roxo {
+  border: 2px solid #6f42c1;
+  color: #6f42c1;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-outline-roxo:hover {
+  background-color: #6f42c1;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.text-roxo {
+  color: #6f42c1 !important;
+}
+
+.catalogo-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.catalogo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.card-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #6f42c1;
+  color: #000;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  pointer-events: none;
+}
+.catalogo-card { position: relative; }
+
+/* ====== BOTÕES DE QUANTIDADE ====== */
+.qtd-plus, .qtd-minus {
+  background-color: var(--roxo); /* fundo roxo */
+  color: #fff;                    /* texto branco */
+}
+
+.qtd-plus:hover, .qtd-minus:hover {
+  background-color: var(--roxo-escuro); /* hover mais escuro */
+}
+
+/* ====== BADGE DO CARD ====== */
+.card-badge {
+  background-color: var(--roxo);
+  color: #fff;
+}
+
+/* ====== BOTÕES DO MODAL ====== */
+#modalCarrinho .btn-amarelo {
+  background-color: var(--amarelo); /* fundo amarelo */
+  color: #000;                       /* texto preto */
+}
+
+#modalCarrinho .btn-amarelo:hover {
+  background-color: var(--roxo);    /* hover roxo */
+  color: #fff;
+}
+
+/* ====== BOTÕES DE REMOVER NO CARRINHO ====== */
+.cart-item .controls button {
+  background-color: var(--roxo);
+  color: #fff;
+}
+
+.cart-item .controls button:hover {
+  background-color: var(--roxo-escuro);
+}
+
+
+
+}
